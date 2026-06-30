@@ -35,13 +35,13 @@ pipeline {
     	success {
             script {
                 // Notify success to Slack
-                slackSend channel: '#spark-alert', color: 'good', message: "Build SUCCESSFUL: ${env.JOB_NAME} [${env.BUILD_NUMBER}] (${env.BUILD_URL})"
+                slackSend channel: '#spark-alerts', color: 'good', message: "Build SUCCESSFUL: ${env.JOB_NAME} [${env.BUILD_NUMBER}] (${env.BUILD_URL})"
             }
         }
         failure {
             script {
                 // Notify failure to Slack
-                slackSend channel: '#spark-alert', color: 'danger', message: "Build FAILED: ${env.JOB_NAME} [${env.BUILD_NUMBER}] (${env.BUILD_URL})"
+                slackSend channel: '#spark-alerts', color: 'danger', message: "Build FAILED: ${env.JOB_NAME} [${env.BUILD_NUMBER}] (${env.BUILD_URL})"
             }
         }
         always {
@@ -52,4 +52,6 @@ pipeline {
         }
     }
 }
-Add your content here
+
+
+
