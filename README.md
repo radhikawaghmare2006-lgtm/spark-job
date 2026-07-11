@@ -1,6 +1,3 @@
 #
 
 first commit
-second commit
-third commit
-fouth commit
